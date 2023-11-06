@@ -23,10 +23,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../styles/partials/varibles' as *;
+// @use '../styles/partials/varibles' as *;
 
-.container {
-    max-width: 1024px;
+.col-4 {
+	flex-basis: calc((100% / 12) * 4);  
+}
 
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
 </style>
