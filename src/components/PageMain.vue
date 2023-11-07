@@ -1,17 +1,21 @@
 <script>
-import Dbjson from 'db.json';
+import cardJson from '../db.json';
+import Card from './Card.vue';
 
 export default {
-  src: {
-        Dbjson,
-        
+  components: {
+       Card,
     },
-
+  
   data() {
     return {
       title: 'Vite-Booleando',
-      menu: []
+      // menu: []
+      cardJson: cardJson,
     }
+  },
+  created() {
+    console.log(this.cardJson);
   }
 }
 </script>
@@ -20,9 +24,11 @@ export default {
   <main class="page-content">
     <div class="container">
       <div class="row">
-        <div v-for="n in 6" :key="n" class="col-4">
+        <div v-for="(product, index) in products" :key="product.id" class="col-4">
           <div class="card">
-            <figure class="card-image">
+            <Card :id="card.id" :brand="card.brand" :name="card.name" 
+            :price="card.price" />
+            <!-- <figure class="card-image">
               <img src="../img/1.webp" alt="" />
 
               <span class="heart-icon">&hearts;</span>
@@ -33,7 +39,7 @@ export default {
               <p>Levi's</p>
               <h4>RELAXED FIT TEE UNISEX</h4>
               <SPAN>14,99 &euro;</SPAN> 29,99&euro;
-            </figure>
+            </figure> -->
           </div>
         </div>
       </div>
@@ -52,51 +58,54 @@ export default {
 }
 
 .card-image {
-    position: relative;
+  position: relative;
 }
+
 .heart-icon {
-	position: absolute;
-	top: 10px;
-    right: 0;
-	width: 50px;
-    padding: 10px;
-	display: block;
-	text-align: center;
-	font-size: 32px;    
-	color: black;
-    background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 50px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  color: black;
+  background-color: white;
 }
 
 .discount-red {
-    color: white;
-    background-color: red;
-    padding: 5px;
-    font-size: 15px;
-    height: 25px;
-    /* position: absolute;
+  color: white;
+  background-color: red;
+  padding: 5px;
+  font-size: 15px;
+  height: 25px;
+  /* position: absolute;
     bottom: 100px;
     left: 0; */
-    
+
 }
 
 .sustainability-green {
-    color: white;
-    background-color: green;
-    padding: 5px;
-    height: 25px;
-    /* position: absolute;
+  color: white;
+  background-color: green;
+  padding: 5px;
+  height: 25px;
+  /* position: absolute;
     bottom: 100px;
-    left: 45px; */  
+    left: 45px; */
 }
+
 .badge {
-    position: absolute;
-    bottom: 140px;
-    left: 0;
-    
+  position: absolute;
+  bottom: 140px;
+  left: 0;
+
 
 }
+
 .card-image:hover {
-    opacity: 100;
-	background-image: url(../img/1b.webp);
-} 
+  opacity: 100;
+  background-image: url(../img/1b.webp);
+}
 </style>
