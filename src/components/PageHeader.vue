@@ -11,14 +11,19 @@ export default {
 
 <template>
     <div class="header-page">
-        <div class="link"><a href="#">Donna</a>
+        <div class="header-link">
+            <div class="link"><a href="#">Donna</a>
+            </div>
+            <div class="link"><a href="#">Uomo</a>
+            </div>
+            <div class="link"><a href="#">Bambini</a>
+            </div>
         </div>
-        <div class="link"><a href="#">Uomo</a>
+       
+        <div class="header-title"> Boolean
         </div>
-        <div class="link"><a href="#">Bambini</a>
+        <div class="header-shop"> <a href="#"> Shop</a>
         </div>
-        <div class="header-title"> Boolean</div>
-        <div class="header-shop"> Shop</div>
     </div>
 </template>
 
