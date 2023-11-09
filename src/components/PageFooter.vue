@@ -1,7 +1,16 @@
 <script>
+import { store } from '../store'
+
 export default {
-    name: 'PageFooter'
-}
+    components: {
+
+    },
+    data() {
+        return {
+            store: store,
+        }
+    }
+}    
 </script>
 
 <template>
