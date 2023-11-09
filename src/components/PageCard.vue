@@ -5,6 +5,7 @@ export default {
 </script>
 
 <template>
+    <h2>Card 1</h2>
 
 </template>
 

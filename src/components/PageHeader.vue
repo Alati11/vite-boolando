@@ -20,7 +20,8 @@ export default {
             </div>
         </div>
        
-        <div class="header-title"> Boolean
+        <div class="header-title"> 
+            <button class="modal">Booleando</button>
         </div>
         <div class="header-shop"> <a href="#"> Shop</a>
         </div>
@@ -31,5 +32,20 @@ export default {
 // @use '../styles/partials/varibles' as *;
 @use '../styles/general.scss';
 @use '../styles/header.scss';
+
+.modal {
+    width: 400px;
+    align-items: center;
+    background-color: lightgrey;
+    color: black;
+    transform: translate(-50, -50);
+    z-index: 50;
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+    margin-left: -200px;
+    box-shadow: 0px, 0px, 20px, rgba(0, 0, 0, 1);
+
+}
 
 </style>

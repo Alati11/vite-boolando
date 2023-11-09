@@ -1,7 +1,8 @@
 import { reactive } from 'vue';
+import CardJson from './db.json';
 
 export const store = reactive ({
-
-    message: 'Booleando'
+    card: CardJson,
+    message: 'Booleandoooooo',
 
 })

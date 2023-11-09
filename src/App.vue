@@ -2,7 +2,8 @@
 
 import PageHeader from './components/PageHeader.vue';
 import PageFooter from './components/PageFooter.vue';
-import PageMain from './components/PageMain.vue';   
+import PageMain from './components/PageMain.vue';  
+import { store } from './store';     
 // import axios from 'axios';
 
 
@@ -11,7 +12,7 @@ export default {
         PageHeader,
         PageFooter,
         PageMain,
-
+        store,      
     },
 
     data() {

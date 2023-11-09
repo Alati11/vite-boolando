@@ -1,17 +1,19 @@
 <script>
-import cardJson from '../db.json';
+import CardJson from '../db.json';
 import PageCard from './PageCard.vue';
+// import store from '../store';
 
 export default {
   components: {
-       Card,
-    },
-  
+    PageCard,
+    // store,
+  },
+
   data() {
     return {
       title: 'Vite-Booleando',
       // menu: []
-      cardJson: cardJson,
+      card: CardJson,
     }
   },
   created() {
@@ -24,13 +26,11 @@ export default {
   <main class="page-content">
     <div class="container">
       <div class="row">
-        <div 
-          v-for="(product, index) in products" 
-          :key="product.id" 
-          class="col-4">
-          <PageCard/>
-        
-            <!-- <figure class="card-image">
+        <div v-for="(product, index) in store.products" :key="product.id" class="col-4">
+
+          <PageCard />
+
+          <!-- <figure class="card-image">
               <img src="../img/1.webp" alt="" />
 
               <span class="heart-icon">&hearts;</span>
@@ -42,10 +42,10 @@ export default {
               <h4>RELAXED FIT TEE UNISEX</h4>
               <SPAN>14,99 &euro;</SPAN> 29,99&euro; 
             </figure> -->
-          
         </div>
       </div>
     </div>
+   
   </main>
 </template>
 

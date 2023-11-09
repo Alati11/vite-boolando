@@ -14,6 +14,9 @@ export default {
 </script>
 
 <template>
+    <div>
+        {{ store.message }}
+    </div>
 
 </template>
 
