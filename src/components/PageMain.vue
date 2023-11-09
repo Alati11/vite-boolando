@@ -1,6 +1,6 @@
 <script>
 import cardJson from '../db.json';
-import Card from './Card.vue';
+import PageCard from './PageCard.vue';
 
 export default {
   components: {
@@ -24,10 +24,12 @@ export default {
   <main class="page-content">
     <div class="container">
       <div class="row">
-        <div v-for="(product, index) in products" :key="product.id" class="col-4">
-          <div class="card">
-            <Card :id="card.id" :brand="card.brand" :name="card.name" 
-            :price="card.price" />
+        <div 
+          v-for="(product, index) in products" 
+          :key="product.id" 
+          class="col-4">
+          <PageCard/>
+        
             <!-- <figure class="card-image">
               <img src="../img/1.webp" alt="" />
 
@@ -38,9 +40,9 @@ export default {
               </div>
               <p>Levi's</p>
               <h4>RELAXED FIT TEE UNISEX</h4>
-              <SPAN>14,99 &euro;</SPAN> 29,99&euro;
+              <SPAN>14,99 &euro;</SPAN> 29,99&euro; 
             </figure> -->
-          </div>
+          
         </div>
       </div>
     </div>

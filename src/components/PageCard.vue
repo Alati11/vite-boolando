@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'Card',
+    name: 'PageCard',
 }
 </script>
 
